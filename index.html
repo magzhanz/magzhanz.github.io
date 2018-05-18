@@ -19,6 +19,11 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
+    <!-- Credit to w3schools.com for script part -->
+    <style>
+      .mySlides {display:none;}
+    </style>
+
   </head>
 
   <body id="page-top">
@@ -46,14 +51,25 @@
       </div>
     </nav>
 
+    <!-- Credit to w3schools.com -->
+    <div class="container-fluid">
+      <div class="w3-content w3-section" class="img-fluid">
+        <img class="mySlides" src="img/1.png">
+        <img class="mySlides" src="img/3.jpeg">
+        <img class="mySlides" src="img/4.jpeg">
+        <img class="mySlides" src="img/restaurant_1.jpeg">      
+      </div>
+    </div>
+
 <!--    <header class="bg-danger text-white"> -->
+<!--
       <div class="container-fluid text-center">
-<!--        <h1>Добро пожаловать в ресторан Достар</h1> -->
+        <h1>Добро пожаловать в ресторан Достар</h1>
         <p class="lead">Добро пожаловать в ресторан Достар</p>
         <img src="img/3.jpeg" class="img-fluid" alt="Banner">
       </div>
     </header>
-
+-->
     <section id="about">
       <div class="container">
         <div class="row">
@@ -148,6 +164,24 @@
       </div>
       <!-- /.container -->
     </footer>
+
+    <!-- Credit for this script to w3schools.com -->
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
